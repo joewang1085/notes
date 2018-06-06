@@ -1,0 +1,22 @@
+
+
+2.方式一 ：使用命令行：
+gopm get github.com/smartystreets/goconvey或者
+go get github.com/smartystreets/goconvey
+
+运行时间较长，运行完后，1.在$GOPATH/src目录下新增了github.com子目录，该子目录里包含了GoConvey框架的库代码
+			2.在$GOPATH/bin目录下新增了GoConvey框架的可执行程序goconvey
+
+方式二： 手动 下载 “ github.com/smartystreets/goconvey”
+ 
+同时需要下载“github.com/jtolds/gls”
+	  和“github.com/smartystreets/assertions”两个相关包，
+
+按照github.com/smartystreets/goconvey 、github.com/jtolds/gls 、github.com/smartystreets/assertions目录封装成github目录手动放在$GOPATH/src目录下
+
+
+3.GOPATH 和 GOROOT关系
+
+windows：（有待进一步理解）
+GOROOT是 go安装包的位置，可以安装多个go安装包，windows下环境变量名为GOROOT
+GOPATH是选择的GOROOT，每个项目必须指定一个GOPATH，windows下环境变量名为PATH，多个用“；”隔开
