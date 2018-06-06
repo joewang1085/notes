@@ -1,0 +1,3 @@
+GOROOT : go安装包安装的位置，一般为c:\Go
+GOPATH : 项目工作区，在控制台编译的时候可以找到GOROOT，可以为D:\myProgram  ,myProgram就是项目总目录，,myProgram/src存放工作区源码，使用liteIDE编译时，工具会临时写入GOPATH，原理相同
+PATH: go安装包安装后的bin目录位置，一般为c:\Go\bin,目的是为了可以再控制台执行go的命令行命令
