@@ -1,0 +1,25 @@
+1. 下载安装go
+2. 配置linux环境变量 ： 配置方法①/etc/profile  全局环境变量  ② 各个用户下的环境变量
+
+vi /etc/profile
+增加  export GOROOT=/home/go  (go 安装路径)
+      export PATH=$PATH:$GOTOOT/bin
+
+      exprot GOPATH  （或者 export GOPATH=/home/workspace  app源码路径） //一下这两步也可以在编译的时候临时配置
+      export PATH=$PATH:$GOPATH/bin  (只有一个app时才能配置该app的bin)
+
+3. 编译源码 ：
+
+   若在 /etc/profile中没有配置 GOPATH ，需要手动配置该app 的GOPATH
+
+export GOPATH=/home/workspace  (app路径)
+export PATH=$PATH:$GOPATH/bin  (目的是在任何位置都可以直接输入app名称来执行，不必输入路径)
+
+go install app_name  (main.go文件所在的文件夹名称)  //会生成bin , pkg目录，bin目录下是可执行程序二进制文件
+
+
+3. 执行
+
+如果存在export PATH=$PATH:$GOPATH/bin  (不管是配置文件，还是临时)
+则      app_name & (后台执行)  
+或者   path/app_name &  (需要输入app的路径)
