@@ -1,0 +1,16 @@
+全局变量可通过GoStub框架打桩
+过程可通过Monkey框架打桩 (GoStub)
+函数可通过Monkey框架打桩 (GoStub)
+方法可通过Monkey框架打桩
+interface可通过GoMock框架打桩，
+
+函数、过程多次重复调用打桩 (GoStub二次开发)
+
+Monkey的缺陷及解决方案
+1.inline函数没有地址的特性导致了Monkey框架的第一个缺陷：对inline函数打桩无效。
+解决方案：命令加参数-gcflags=-l，强制不产生inline函数，   go test -gcflags=-l -v
+2.方法名首字母小写：
+解决方案：方法名大写
+3.PI不够简洁优雅，同时不支持多次调用桩函数（方法）而呈现不同行为的复杂情况。
+解决方案：mokey的二次开发
+
