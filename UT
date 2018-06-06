@@ -14,3 +14,13 @@ Monkey的缺陷及解决方案
 3.PI不够简洁优雅，同时不支持多次调用桩函数（方法）而呈现不同行为的复杂情况。
 解决方案：mokey的二次开发
 
+反射：
+mockgen domain\model MongodbInterface> F:\TOMAS2.0\TOMASBACKEND_2.0\TOMAS_BACKEND\ReportService/src/test/mock/db/mock_mongodb.go
+
+
+源文件：
+mockgen -source=mongodbInterface.go(当前路径的相对路径或者绝对路径) -destination=F:\TOMAS2.0\TOMASBACKEND_2.0\TOMAS_BACKEND\ReportService\src\test\mock\mongodb\mock_mongodb.go（必须绝对路径）
+即 ： mockgen -source=mongodbInterface.go -destination=F:\TOMAS2.0\TOMASBACKEND_2.0\TOMAS_BACKEND\ReportService\src\test\mock\mongodb\mock_mongodb.go    
+mockgen -source=F:\TOMAS2.0\TOMASBACKEND_2.0\TOMAS_BACKEND\ReportService\src\domain\model\mongodbInterface.go -destination=F:\TOMAS2.0\TOMASBACKEND_2.0\TOMAS_BACKEND\ReportService\src\test\mock\mongodb\mock_mongodb.go   
+
+gomock 目前理解：针对interface类型进行打桩，生成interface的打桩对象，可以利用多态的特性将interface对象作为obj对象的替代者对obj实现的方法进行打桩
