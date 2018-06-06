@@ -1,0 +1,4 @@
+1. 建立连接有延迟
+2. 发送消息有延迟， 同时无时间间隔发送多条消息，可能会丢失和顺序颠倒
+3. 发送消息分片？不能太大，否则回报错： Could not decode a text frame as UTF-8.
+分片发送，防止报错WebSocket connection to 'ws://localhost:4000/' failed: Could not decode a text frame as UTF-8
