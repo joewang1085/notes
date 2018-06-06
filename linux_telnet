@@ -1,0 +1,21 @@
+1.判断是否安装xinet : rpm -qa xinetd
+安装 xinetd : yum install xinetd
+2.判断是否安装 telnet : rpm -qa telnet
+安装telnet : yum install telnet-server.... (table自动补齐)
+3.启动telnet服务 ：  修改telnet服务配置文件
+vi /etc/xinetd.d/telnet 
+service telnet
+{
+disable = yes
+flags = REUSE
+socket_type = stream
+wait = no
+user = root
+server = /usr/sbin/in.telnetd
+log_on_failure += USERID
+}
+将disable=yes改为disable=no
+参考链接 ：http://jingyan.baidu.com/article/54b6b9c0fc370b2d593b477a.html
+4.测试： telnet 127.0.0.1
+不支持用root用户登录
+5.必要时关闭防火墙
