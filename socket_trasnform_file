@@ -1,0 +1,17 @@
+socket server：
+1.建立监听   netListen, err := net.Listen("tcp", "localhost:1024")
+2.等待建立连接 for {
+			conn, err := netListen.Accept() //建立连接
+			go handleConnection(conn) //用一个携程处理一个conn
+		}
+3.处理连接  conn.Read(buffer)，读取连接conn中的流放入字节切片buffer中
+	    File, err := os.Create(`E:\SockerServer\111\`)  //创建文件
+	    if err != nil {
+		fmt.Println(err)
+		conn.Close()
+		return
+	    }
+	    io.Copy(File, conn)  //将conn中的流复制写入到文件File中（向前插入）
+	    File.Close()
+	    conn.Close()
+	    conn.Write(buffer)  //将字节切片写入conn流中
