@@ -1,0 +1,10 @@
+1.使用“path/filepath”包下的  filepath.Separater作为目录的分隔符  ：
+
+因为windows的分隔符是  `\` 
+二linux的分隔符是 `/`
+
+
+2.os.Getwd   获取当前路径
+
+windows获取的是程序.exe文件的目录
+linux获取的是pwd所在的工作目录，与执行程序所在的位置没有关系
