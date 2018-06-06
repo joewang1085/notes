@@ -1,0 +1,16 @@
+linux和windows（git）电脑之间传输文件和目录 ：
+
+cp 传输文件
+scp 传输目录
+
+从远程电脑获取文件
+scp -P 2424 -r name@ip:/home/name/aaa/ /home/name/        
+cp -P 2424  name@ip:/home/name/aaa/1.txt /home/name/
+
+
+上传本地文件到远程电脑文件
+scp -P 2424  /home/name/  -r name@ip:/home/name/aaa/      
+cp -P 2424 /home/name/aaa/1.txt  name@ip:/home/name/ 
+
+
+（-P 2424表示更改SSH端口后的端口，如果没有更改SSH端口可以不用添加该参数；）
