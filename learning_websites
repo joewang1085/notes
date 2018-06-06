@@ -1,0 +1,29 @@
+1.新手系统学习 ：  
+Go系列教程（Golang tutorial seriers）-专栏——Go语言中文网-Golang中文社区
+
+2.doceker入门
+Docker入门教程-阮一峰的网络日志
+
+3.社区
+每日新闻-Go中国技术社区-golang
+掘金论坛 ：  a.大型分布式网站架构实战项目分析   b.tcp、http面试指南
+
+4.go 包管理
+a.go verdor介绍
+b.golang使用vendor目录来管理依赖包-简书
+c.go get
+d.go 安装 ： GOPATH GOROOT
+
+5.go lang学习
+a.go interface ; interface 与nil
+b.go gc
+c.golang正则表达式regexp示例大全-快乐编程
+d.parallel/README_CN.md at master·buptmiao/parallel·github
+e.golang中recover和panic用法-CSDN博客
+f.正向代理/反向代理，restful接口，rpc接口，分布式，微服务（soa）,nginx,DDD领域驱动设计
+g.go channel（用法，原理，源码）
+h.golang信号signal的处理-快乐编程
+i.golang map。哈希算法
+j.golang 反射三大定律。反射原理，源码
+k.golang 同步锁、读写锁
+l.strconv/strings包
